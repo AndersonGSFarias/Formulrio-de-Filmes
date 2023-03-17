@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indique um Filme</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/favcon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+         <!-- Cabeçalho-->
+        <div class="header">
+            <img class="img-header" src="img/header.png" alt="Fundo">
+        </div>
+        <!--Titulo do Cabeçalho-->
+        <div class="form-container">
+
+            <div class="form-body">
+
+                <!-- Titulo do Formulario-->
+            <div class="titulo-form">
+                <h1 class="title">Indique um filme para alguém! <span style="font-size: 25pt;">🎬</span></h1>
+                <p class="description">Fale o nome do seu filme, onde assistir e outras características citadas abaixo:</p>
+            </div>
+
+            <!-- Formulário-->
+
+            <form method="get" action="form-filme">
+
+                <!-- Titulo Filme-->
+                <div class="title-filme">
+                   <label for="title-filme">Nome do filme <span class="required-field">*</span></label><br>
+                   <input required placeholder="Coloque o nome do filme " type="text" name="name-filme" class="title-filme">
+                </div>
+
+                <div class="age">
+                    <label for="age">Classificação Indicativa <span class="required-field">*</span></label><br>
+                    <select class="age-options" name="faixa-etaria" id="age">
+                        <option value="0">Escolha</option>
+                        <option value="1">Livre</option>
+                        <option value="2">10 Anos</option>
+                        <option value="3">12 Anos</option>
+                        <option value="4">14 Anos</option>
+                        <option value="5">16 Anos</option>
+                        <option value="6">18 Anos</option>
+                        
+                    </select>
+
+                </div>
+
+                <!-- Generos-->
+                <div class="generes">
+                    <p>Escolha os genêros do filme:</p>
+                    <ul class="generes-list">
+                        <li>
+                                <input type="checkbox" name="Terror" id="Terror">
+                                <label for="Terror">Terror</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="Suspense" id="Suspense">
+                                <label for="Suspense">Suspense</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="Ação" id="Ação">
+                                <label for="Ação">Ação</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="Aventura" id="Aventura">
+                                <label for="Aventura">Aventura</label>
+    
+                            <li>
+                                <input type="checkbox" name="Fantasia" id="Fantasia">
+                                <label for="Fantasia">Fantasia</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="Ficção Cíentifica" id="Ficção Cíentifica">
+                                <label for="Ficção Cíentifica">Ficção Cíentifica</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="Comédia" id="Comédia">
+                                <label for="Comédia">Comédia</label>               
+                            </li>
+                            <li>
+                                <input type="checkbox" name="Romance" id="Romance">
+                                <label for="Romance">Romance</label>
+                            </li>    
+                        </li>
+                    </ul>
+                    <ul class="generes-list">
+                        
+                    </ul>
+                </div>
+
+                <!-- Sinopse-->
+                <div class="sinopse">
+                    <label for="description-filme">Sinopse<span class="required-field">*</span>
+                    </label><br>
+                    <textarea 
+                     placeholder="Escreva um breve resumo sobre o filme (Cuidado com spoiler 👀)"
+                     name="form-filme" 
+                     id="description-filme" 
+                     cols="30" 
+                     rows="10">
+                    </textarea>
+
+                    <!-- Avaliação-->
+                <div class="rating-container">
+                    <label for="avaliação">Qual avaliação você daria ao filme? <span class="required-field">*</span></label><br>
+                    <div class="rating">
+                        <input type="radio" id="estrela5" name="avaliacao" value="5">
+                        <label for="estrela5">⭐⭐⭐⭐⭐</label><br>
+                        <input type="radio" id="estrela4" name="avaliacao" value="4">
+                        <label for="estrela4">⭐⭐⭐⭐</label><br>
+                        <input type="radio" id="estrela3" name="avaliacao" value="3">
+                        <label for="estrela3">⭐⭐⭐</label><br>
+                        <input type="radio" id="estrela2" name="avaliacao" value="2">
+                        <label for="estrela2">⭐⭐</label><br>
+                        <input type="radio" id="estrela1" name="avaliacao" value="1">
+                        <label for="estrela1">⭐</label>
+                    </div>
+                </div>
+
+                    <!-- Plataformas de Streaming-->
+                <div class="platform-streaming">
+                    <p>Quais plataformas de streaming encontrar:</p>
+                    <div class="plataformas">
+                        <ul class="platforms-list">
+                            <li>
+                                <input type="checkbox" name="plataformas" id="Prime Video">
+                                <label for="plataform">Prime Video</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" name="plataformas" id="Netflix">
+                                <label for="plataform">Netflix</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" name="plataformas" id="Star+">
+                                <label for="plataform">Star+</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="plataformas" id="Disney+">
+                                <label for="plataform">Disney+</label>
+                            </li>
+                            
+                            <li>
+                                <input type="checkbox" name="plataformas" id="HBOX Max">
+                                <label for="plataform">HBOX Max</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" name="plataformas" id="Apple TV+">
+                                <label for="plataform">Apple TV+</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="plataformas" id="Nenhum">
+                                <label for="plataform">Nenhum</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="plataformas" id="Outro">
+                                <label fDor="plataform">Outro</label>
+                            </li>
+                        </ul>
+                            <div class="submit-box">
+                                <input type="submit" class="btn-submit" name="submit" id="submit" value="Enviar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
